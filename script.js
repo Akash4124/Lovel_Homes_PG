@@ -1,0 +1,1 @@
+console.log("Lovely Homes PG Mobile Website Ready");
