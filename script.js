@@ -1,1 +1,3 @@
-console.log("Lovely Homes PG Mobile Website Ready");
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
