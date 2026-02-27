@@ -6,41 +6,63 @@ body {
 
 /* NAVBAR */
 .navbar {
-    background: #ff6b00;
-    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 18px;
+    padding: 15px 5%;
+    background: #ff7a00;
     color: white;
+    position: relative;
 }
 
 .brand-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 600;
-    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
-    margin: 0 10px;
-    color: white;
     text-decoration: none;
+    color: white;
     font-weight: 500;
 }
 
-.nav-links a:hover {
-    border-bottom: 2px solid white;
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 /* HERO */
 .hero {
     background: linear-gradient(135deg, #ff6b00, #ff914d);
